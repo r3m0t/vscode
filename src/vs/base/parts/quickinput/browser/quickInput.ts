@@ -1505,6 +1505,8 @@ export class QuickInputController extends Disposable {
 			input.autoFocusOnList = (options.autoFocusOnList === undefined) || options.autoFocusOnList; // default to true
 			input.quickNavigate = options.quickNavigate;
 			input.hideInput = !!options.hideInput;
+			input.step = options.step;
+			input.totalSteps = options.totalSteps;
 			input.contextKey = options.contextKey;
 			input.busy = true;
 			Promise.all([picks, options.activeItem])
@@ -1596,6 +1598,8 @@ export class QuickInputController extends Disposable {
 			input.valueSelection = options.valueSelection;
 			input.prompt = options.prompt;
 			input.placeholder = options.placeHolder;
+			input.step = options.step;
+			input.totalSteps = options.totalSteps;
 			input.password = !!options.password;
 			input.ignoreFocusOut = !!options.ignoreFocusLost;
 			input.show();

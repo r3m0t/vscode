@@ -96,11 +96,13 @@ export class MainThreadQuickOpen implements MainThreadQuickOpenShape {
 
 		if (options) {
 			inputOptions.title = options.title;
-			inputOptions.password = options.password;
-			inputOptions.placeHolder = options.placeHolder;
+			inputOptions.value = options.value;
 			inputOptions.valueSelection = options.valueSelection;
 			inputOptions.prompt = options.prompt;
-			inputOptions.value = options.value;
+			inputOptions.placeHolder = options.placeHolder;
+			inputOptions.password = options.password;
+			inputOptions.step = options.step;
+			inputOptions.totalSteps = options.totalSteps;
 			inputOptions.ignoreFocusLost = options.ignoreFocusOut;
 		}
 

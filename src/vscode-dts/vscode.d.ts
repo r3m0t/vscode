@@ -1815,6 +1815,17 @@ declare module 'vscode' {
 		 */
 		canPickMany?: boolean;
 
+
+		/**
+		 * An optional current step count.
+		 */
+		step?: number;
+
+		/**
+		 * An optional total step count.
+		 */
+		totalSteps?: number;
+
 		/**
 		 * An optional function that is invoked whenever an item is selected.
 		 */
@@ -2032,6 +2043,16 @@ declare module 'vscode' {
 		 * An optional string to show as placeholder in the input box to guide the user what to type.
 		 */
 		placeHolder?: string;
+
+		/**
+		 * An optional current step count.
+		 */
+		step?: number;
+
+		/**
+		 * An optional total step count.
+		 */
+		totalSteps?: number;
 
 		/**
 		 * Controls if a password input is shown. Password input hides the typed text.

@@ -119,6 +119,16 @@ export interface IPickOptions<T extends IQuickPickItem> {
 	contextKey?: string;
 
 	/**
+	 * An optional current step count.
+	 */
+	step?: number;
+
+	/**
+	 * An optional total step count.
+	 */
+	totalSteps?: number;
+
+	/**
 	 * an optional property for the item to focus initially.
 	 */
 	activeItem?: Promise<T> | T;
@@ -160,6 +170,19 @@ export interface IInputOptions {
 	 */
 	password?: boolean;
 
+	/**
+	 * An optional current step count.
+	 */
+	step?: number;
+
+	/**
+	 * An optional total step count.
+	 */
+	totalSteps?: number;
+
+	/**
+	 * an optional flag to not close the picker on focus lost
+	 */
 	ignoreFocusLost?: boolean;
 
 	/**

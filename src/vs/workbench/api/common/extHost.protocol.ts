@@ -572,6 +572,8 @@ export interface IInputBoxOptions {
 	prompt?: string;
 	placeHolder?: string;
 	password?: boolean;
+	step?: number;
+	totalSteps?: number;
 	ignoreFocusOut?: boolean;
 }
 
