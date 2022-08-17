@@ -274,6 +274,7 @@ export function createExtHostQuickOpen(mainContext: IMainContext, workspace: IEx
 		private _busy = false;
 		private _ignoreFocusOut = true;
 		private _value = '';
+		private _valueSelection: Readonly<[number, number]> | undefined;
 		private _placeholder: string | undefined;
 		private _buttons: QuickInputButton[] = [];
 		private _handlesToButtons = new Map<number, QuickInputButton>();
@@ -356,6 +357,15 @@ export function createExtHostQuickOpen(mainContext: IMainContext, workspace: IEx
 		set value(value: string) {
 			this._value = value;
 			this.update({ value });
+		}
+
+		get valueSelection() {
+			return this._valueSelection;
+		}
+
+		set valueSelection(valueSelection: readonly [number, number] | undefined) {
+			this._valueSelection = valueSelection;
+			this.update({ valueSelection });
 		}
 
 		get placeholder() {

@@ -194,7 +194,7 @@ CommandsRegistry.registerCommand({
 		return commandService.executeCommand('_files.windowOpen', [uriToOpen], options);
 	},
 	description: {
-		description: 'Open a folder or workspace in the current window or new window depending on the newWindow argument. Note that opening in the same window will shutdown the current extension host process and start a new one on the given folder/workspace unless the newWindow parameter is set to true.',
+		description: 'Open a folder or workspace in the current window or new window depending on the forceNewWindow argument. Note that opening in the same window will shutdown the current extension host process and start a new one on the given folder/workspace unless the forceNewWindow parameter is set to true.',
 		args: [
 			{
 				name: 'uri', description: '(optional) Uri of the folder or workspace file to open. If not provided, a native dialog will ask the user for the folder',
@@ -235,7 +235,7 @@ CommandsRegistry.registerCommand({
 		return commandService.executeCommand('_files.newWindow', commandOptions);
 	},
 	description: {
-		description: 'Opens an new window depending on the newWindow argument.',
+		description: 'Opens an new window depending on the reuseWindow argument.',
 		args: [
 			{
 				name: 'options',
