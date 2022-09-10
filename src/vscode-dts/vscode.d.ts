@@ -2029,10 +2029,10 @@ declare module 'vscode' {
 		/**
 		 * Selection of the pre-filled {@linkcode InputBoxOptions.value value}. Defined as tuple of two number where the
 		 * first is the inclusive start index and the second the exclusive end index. When `undefined` the whole
-		 * word will be selected, when empty (start equals end) only the cursor will be set,
+		 * pre-filled value will be selected, when empty (start equals end) only the cursor will be set,
 		 * otherwise the defined range will be selected.
 		 */
-		valueSelection?: [number, number];
+		valueSelection?: readonly [number, number];
 
 		/**
 		 * The text to display underneath the input box.
@@ -11242,7 +11242,18 @@ declare module 'vscode' {
 		value: string;
 
 		/**
-		 * Optional placeholder in the filter text.
+		 * Selection range in the filter text. Defined as tuple of two number where the
+		 * first is the inclusive start index and the second the exclusive end index. When `undefined` the whole
+		 * pre-filled value will be selected, when empty (start equals end) only the cursor will be set,
+		 * otherwise the defined range will be selected.
+		 *
+		 * This property does not get updated when the user types or makes a selection,
+		 * but it can be updated by the extension.
+		 */
+		valueSelection: readonly [number, number] | undefined;
+
+		/**
+		 * Optional placeholder shown in the filter textbox when no filter has been entered.
 		 */
 		placeholder: string | undefined;
 
@@ -11334,7 +11345,18 @@ declare module 'vscode' {
 		value: string;
 
 		/**
-		 * Optional placeholder in the filter text.
+		 * Selection range in the input value. Defined as tuple of two number where the
+		 * first is the inclusive start index and the second the exclusive end index. When `undefined` the whole
+		 * pre-filled value will be selected, when empty (start equals end) only the cursor will be set,
+		 * otherwise the defined range will be selected.
+		 *
+		 * This property does not get updated when the user types or makes a selection,
+		 * but it can be updated by the extension.
+		 */
+		valueSelection: readonly [number, number] | undefined;
+
+		/**
+		 * Optional placeholder shown when no value has been input.
 		 */
 		placeholder: string | undefined;
 

@@ -570,7 +570,7 @@ export interface TransferInputBox extends BaseTransferQuickInput {
 export interface IInputBoxOptions {
 	title?: string;
 	value?: string;
-	valueSelection?: [number, number];
+	valueSelection?: Readonly<[number, number]>;
 	prompt?: string;
 	placeHolder?: string;
 	password?: boolean;

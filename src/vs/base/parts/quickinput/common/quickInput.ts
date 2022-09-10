@@ -151,9 +151,9 @@ export interface IInputOptions {
 	value?: string;
 
 	/**
-	 * the selection of value, default to the whole word
+	 * the selection of value, default to the whole prefilled value
 	 */
-	valueSelection?: [number, number];
+	valueSelection?: readonly [number, number];
 
 	/**
 	 * the text to display underneath the input box
